@@ -70,7 +70,7 @@ function GameServer() {
         serverRestart: 0, // Toggle whether you want your server to auto restart in minutes. (0 to disable)
 
         /** CLIENT **/
-        serverMaxLB: 10, // Controls the maximum players displayed on the leaderboard.
+        serverMaxLB: 15, // Controls the maximum players displayed on the leaderboard.
         serverChat: 1, // Allows the usage of server chat. 0 = no chat, 1 = use chat.
         serverChatAscii: 1, // Set to 1 to disable non-ANSI letters in the chat (english only)
         separateChatForTeams: 0, // Set to 1 to separate chat for game modes with teams like 'Teams'
@@ -127,7 +127,7 @@ function GameServer() {
         playerStartSize: 71.6227766017, // Start size of the player cell. (vanilla: mass = val*val/100 = 10 mass)
         playerMaxCells: 16, // Maximum cells a player is allowed to have.
         playerSpeed: 1, // Player speed multiplier (1 = normal speed, 2 = twice the normal speed)
-        playerDecayRate: 0.99, // Amount of player cell size lost per second
+        playerDecayRate: 0.04, // Amount of player cell size lost per second
         playerDecayCap: 0, // Maximum mass a cell can have before it's decayrate multiplies by 10. (0 to disable)
         playerRecombineTime: 30, // Base time in seconds before a cell is allowed to recombine
         playerDisconnectTime: -1, // Time in seconds before a disconnected player's cell is removed (Set to -1 to never remove)

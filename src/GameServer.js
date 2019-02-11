@@ -54,16 +54,16 @@ function GameServer() {
         serverTimeout: 300, // Seconds to keep connection alive for non-responding client
         serverWsModule: 'ws', // WebSocket module: 'ws' or 'uws' (install npm package before using uws)
         serverMaxConnections: 500, // Maximum number of connections to the server. (0 for no limit)
-        serverPort: 443, // Server port which will be used to listen for incoming connections
+        serverPort: 3000, // Server port which will be used to listen for incoming connections
         serverBind: '0.0.0.0', // Server network interface which will be used to listen for incoming connections (0.0.0.0 for all IPv4 interfaces)
         serverTracker: 0, // Set to 1 if you want to show your server on the tracker http://ogar.mivabe.nl/master (check that your server port is opened for external connections first!)
         serverGamemode: 0, // Gamemodes: 0 = FFA, 1 = Teams, 2 = Experimental, 3 = Rainbow
-        serverBots: 0, // Number of player bots to spawn (Experimental)
+        serverBots: 30, // Number of player bots to spawn (Experimental)
         serverViewBaseX: 1920, // Base view distance of players. Warning: high values may cause lag! Min value is 1920x1080
         serverViewBaseY: 1080, // min value is 1920x1080
         serverMinScale: 0.15, // Minimum viewbox scale for player (low value leads to lags due to large visible area for big cell)
         serverSpectatorScale: 0.4, // Scale (field of view) used for free roam spectators (low value leads to lags, vanilla = 0.4, old vanilla = 0.25)
-        serverStatsPort: 88, // Port for stats server. Having a negative number will disable the stats server.
+        serverStatsPort: 4000, // Port for stats server. Having a negative number will disable the stats server.
         serverStatsUpdate: 60, // Update interval of server stats in seconds
         mobilePhysics: 0, // Whether or not the server uses mobile agar.io physics
         badWordFilter: 1, // Toggle whether you want the bad word filter on (0 to disable, 1 to enable)
@@ -74,8 +74,8 @@ function GameServer() {
         serverChat: 1, // Allows the usage of server chat. 0 = no chat, 1 = use chat.
         serverChatAscii: 1, // Set to 1 to disable non-ANSI letters in the chat (english only)
         separateChatForTeams: 0, // Set to 1 to separate chat for game modes with teams like 'Teams'
-        serverName: 'MultiOgar-Edited #1', // Server name
-        serverWelcome1: 'Welcome to MultiOgar-Edited!', // First server welcome message
+        serverName: 'Freestyle Agar', // Server name
+        serverWelcome1: 'Welcome to Freestyle Agar Server!', // First server welcome message
         serverWelcome2: '', // Second server welcome message (optional, for info, etc)
         clientBind: '', // Only allow connections to the server from specified client (eg: http://agar.io - http://mywebsite.com - http://more.com) [Use ' - ' to seperate different websites]
 
@@ -124,26 +124,26 @@ function GameServer() {
         playerMaxSize: 1500, // Maximum size a player cell can achive before auto-splitting. (vanilla: mass = val*val/100 = 22500 mass)
         playerMinSplitSize: 59.16079783, // Mimimum size a player cell has to be to split. (vanilla: mass = val*val/100 = 35 mass)
         playerMinEjectSize: 59.16079783, // Minimum size a player cell has to be to eject mass. (vanilla: mass = val*val/100 = 35 mass)
-        playerStartSize: 31.6227766017, // Start size of the player cell. (vanilla: mass = val*val/100 = 10 mass)
+        playerStartSize: 71.6227766017, // Start size of the player cell. (vanilla: mass = val*val/100 = 10 mass)
         playerMaxCells: 16, // Maximum cells a player is allowed to have.
         playerSpeed: 1, // Player speed multiplier (1 = normal speed, 2 = twice the normal speed)
-        playerDecayRate: 0.998, // Amount of player cell size lost per second
+        playerDecayRate: 0.5, // Amount of player cell size lost per second
         playerDecayCap: 0, // Maximum mass a cell can have before it's decayrate multiplies by 10. (0 to disable)
         playerRecombineTime: 30, // Base time in seconds before a cell is allowed to recombine
         playerDisconnectTime: -1, // Time in seconds before a disconnected player's cell is removed (Set to -1 to never remove)
-        playerMaxNickLength: 15, // Maximum nick length
+        playerMaxNickLength: 55, // Maximum nick length
         splitVelocity: 780, // Velocity of splitting cells (speed and distance)
 
         /** MINIONS **/
-        minionStartSize: 31.6227766017, // Start size of minions (mass = 32*32/100 = 10.24)
-        minionMaxStartSize: 31.6227766017, // Maximum value of random start size for minions (set value higher than minionStartSize to enable)
+        minionStartSize: 61.6227766017, // Start size of minions (mass = 32*32/100 = 10.24)
+        minionMaxStartSize: 97.6227766017, // Maximum value of random start size for minions (set value higher than minionStartSize to enable)
         minionCollideTeam: 0, //Determines whether minions colide with their team in the Teams gamemode (0 = OFF, 1 = ON)
-        disableERTP: 1, // Whether or not to disable ERTP controls for minions. (must use ERTPcontrol script in /scripts) (Set to 0 to enable)
+        disableERTP: 0, // Whether or not to disable ERTP controls for minions. (must use ERTPcontrol script in /scripts) (Set to 0 to enable)
         disableQ: 0, // Whether or not to disable Q controls for minions. (Set 0 to enable)
-        serverMinions: 0, // Amount of minions each player gets once they spawn
+        serverMinions: 30, // Amount of minions each player gets once they spawn
         collectPellets: 0, // Enable collect pellets mode. To use just press P or Q. (Warning: this disables Q controls, so make sure that disableERT is 0)
-        defaultName: "minion", // Default name for all minions if name is not specified using command (put <r> before the name for random skins!)
-        minionsOnLeaderboard: 0, // Whether or not to show minions on the leaderboard. (Set 0 to disable)
+        defaultName: "<r> Æ FstyleAgar", // Default name for all minions if name is not specified using command (put <r> before the name for random skins!)
+        minionsOnLeaderboard: 1, // Whether or not to show minions on the leaderboard. (Set 0 to disable)
 
         /** TOURNAMENT **/
         tourneyMaxPlayers: 12, // Maximum number of participants for tournament style game modes
